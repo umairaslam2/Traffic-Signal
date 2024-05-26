@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bg-image {
+    height: 100vh;
+    background-image: url(images/road.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wheel {
+    padding: 50px 50px;
+    animation: wheelRotate linear infinite;
+    animation-duration: .5s;
+}
+
+.wheel>img {
+    width: 75px;
+}
+
+.track {
+    position: absolute;
+    bottom: 0;
+    width: 500vw;
+    height: 18vh;
+    background-image: url(images/track.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: road linear infinite;
+    animation-duration: 2s;
+}
+
+.car {
+    z-index: 100;
+    background-image: url(images/car.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 15vh;
+    width: 400px;
+    position: absolute;
+    left: 20px;
+    bottom: 130px;
+    animation: car linear infinite;
+    animation-duration: .2s;
+}
+
+.wheel1 {
+    position: absolute;
+    right: -4px;
+}
+
+.wheel2 {
+    position: absolute;
+    left: 1px;
+}
+
+@keyframes road {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -2200px;
+    }
+}
+
+@keyframes car {
+    to {
+        bottom: 133px;
+    }
+}
+
+@keyframes wheelRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wheelRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+#traffic-light {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 300px;
+    float: right;
+    margin: 100px 150px 0 0;
+    background: #181d21;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.light {
+    background-color: #2d2f31;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+
+
+
+    
